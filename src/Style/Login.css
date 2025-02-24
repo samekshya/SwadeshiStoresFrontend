@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Login Container */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 100px; /* Fixed navbar overlap */
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d92332;
+  margin-bottom: 15px;
+}
+
+/* Login Heading */
+.login-box h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+
+/* Remember Me & Forgot Password */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+/* Forgot Password Link */
+.options a {
+  text-decoration: none;
+  color: #d92332;
+  font-weight: bold;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d92332;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #b71c27;
+}
+
+/* Signup Section */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+/* Signup Link */
+p a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
