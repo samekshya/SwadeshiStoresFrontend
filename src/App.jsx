@@ -13,6 +13,7 @@ const ShopCategory = React.lazy(() => import("./Pages/ShopCategory.jsx"));
 const Cart = React.lazy(() => import("./Pages/Cart.jsx"));
 const Product = React.lazy(() => import("./Pages/Product.jsx"));
 const Shop = React.lazy(() => import ("./Pages/Shop.jsx"));
+const SettingsPage = React.lazy(() => import ("./Private/SettingsPage.jsx"));
 
 // const PrivateRoute = ({ element }) => {
 //   const isAuthenticated = localStorage.getItem("userToken");
@@ -40,6 +41,7 @@ function App() {
           <Route path='/food' element={<ShopCategory category="food"/>}/>
           <Route path='/clothes' element={<ShopCategory category="clothes"/>}/>
           <Route path='/accessories' element={<ShopCategory category="accessories"/>}/>
+          <Route path="/settingspage" element={<SettingsPage />} />
         </Routes>
       </Suspense>
       <Footer />

@@ -57,9 +57,6 @@ const SettingsPage = () => {
                     <div>
                         <Label>Payment Method</Label>
                         <select name="paymentMethod" value={user.paymentMethod} onChange={handleChange} className="w-full p-2 border rounded">
-                            <option value="Credit Card">Credit Card</option>
-                            <option value="Debit Card">Debit Card</option>
-                            <option value="PayPal">PayPal</option>
                             <option value="Cash on Delivery">Cash on Delivery</option>
                         </select>
                     </div>
@@ -70,7 +67,7 @@ const SettingsPage = () => {
                         <Switch checked={user.darkMode} onCheckedChange={handleToggleTheme} />
                     </div>
                     
-                    {/* Save Button */}
+                    
                     <Button onClick={handleSave} className="w-full">Save Changes</Button>
                 </CardContent>
             </Card>
