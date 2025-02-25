@@ -39,7 +39,7 @@ export const Navbar = () => {
       </ul>
 
       <div className="nav-login-cart">
-        <Link to="/dashboard" className="settings-icon">
+        <Link to="/settingspage" className="settings-icon">
           <FiSettings size={24} />
         </Link>
         <div className="cart-container">
