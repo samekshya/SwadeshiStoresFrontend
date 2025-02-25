@@ -112,7 +112,6 @@
     border-radius: 50px;
     background: rgb(183, 19, 19);
     color: black;
-    
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -125,6 +124,52 @@
 .login-btn:hover {
     background: #f0f0f0;
     transform: scale(1.05);
+}
+
+/* Settings Button */
+.settings-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.settings-btn:hover {
+    color: #ff4500;
+}
+
+.settings-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+.settings-dropdown.active {
+    display: flex;
+}
+
+.settings-dropdown a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.settings-dropdown a:hover {
+    background: #f4f4f4;
 }
 
 body {
