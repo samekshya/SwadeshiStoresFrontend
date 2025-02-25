@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../Style/SettingsPage.css";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,11 +8,11 @@ import { Switch } from "@/components/ui/switch";
 
 const SettingsPage = () => {
   const [user, setUser] = useState({
-    name: "John Doe",
-    email: "johndoe@example.com",
+    name: "Samikshya Baniya",
+    email: "samikshyabaniya@gmail.com",
     password: "",
-    address: "123 Street, Kathmandu, Nepal",
-    paymentMethod: "Credit Card",
+    address: "street no-5, Lakeside, Pokhara",
+    paymentMethod: "COD",
     darkMode: false
   });
 
