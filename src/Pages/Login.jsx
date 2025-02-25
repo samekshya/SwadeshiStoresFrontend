@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import React Router
+import { Link, useNavigate } from "react-router-dom"; 
 import "../style/Login.css";
 
 const Login = () => {
@@ -10,9 +10,9 @@ const Login = () => {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const navigate = useNavigate(); // Hook to navigate between pages
-
-  // Function to update state when input changes
+  const navigate = useNavigate(); 
+  
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -38,14 +38,12 @@ const Login = () => {
         setError(data.error || "Invalid login credentials");
       } else {
         setSuccess("Login successful! Redirecting...");
-        
-        // Save JWT Token in Local Storage
-        localStorage.setItem("token", data.token);
 
-        // Redirect user to dashboard after 2 seconds
-        setTimeout(() => {
-          navigate("/dashboard"); // Use React Router to navigate
-        }, 2000);
+        // ✅ FIX: Store the token correctly
+        localStorage.setItem("userToken", data.token); // Ensure this matches PrivateRoute check
+
+        // ✅ FIX: Redirect instantly after login
+        navigate("/"); // Redirect to homepage
       }
     } catch (error) {
       setError("Server error. Please try again later.");

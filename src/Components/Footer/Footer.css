@@ -5,6 +5,7 @@
     align-items: center;
     gap: 25px;
     padding-top: 20px;
+    background-color: blue;
 }
 .footer-logo{
     display: flex;

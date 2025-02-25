@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import React Router
+import { Link, useNavigate } from "react-router-dom"; 
 import "../style/Signup.css";
 
 const Signup = () => {
@@ -14,9 +14,9 @@ const Signup = () => {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const navigate = useNavigate(); // Hook to navigate between pages
+  const navigate = useNavigate(); 
 
-  // Function to update state on input change
+ 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -25,7 +25,7 @@ const Signup = () => {
     });
   };
 
-  // Function to handle form submission
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -46,6 +46,8 @@ const Signup = () => {
         body: JSON.stringify({
           username: formData.username,
           email: formData.email,
+          address: formData.address,  
+          phone: formData.phone,
           password: formData.password,
         }),
       });
@@ -57,7 +59,7 @@ const Signup = () => {
       } else {
         setSuccess("Signup successful! Redirecting to login...");
         setTimeout(() => {
-          navigate("/login"); // Redirect to login page
+          navigate("/login"); 
         }, 2000);
       }
     } catch (error) {
