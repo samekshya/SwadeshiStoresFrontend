@@ -4,6 +4,7 @@ import "./Navbar.css";
 import logo from "../Assets/logo.png";  
 import cart_icon from "../Assets/cart_icon.png";
 import { ShopContext } from "../../Context/ShopContext"; 
+import { FiSettings } from "react-icons/fi"; // Import settings icon
 
 export const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -38,6 +39,9 @@ export const Navbar = () => {
       </ul>
 
       <div className="nav-login-cart">
+        <Link to="/dashboard" className="settings-icon">
+          <FiSettings size={24} />
+        </Link>
         <div className="cart-container">
           <Link to="/cart">
             <img src={cart_icon} alt="Cart" className="cart-img" />
